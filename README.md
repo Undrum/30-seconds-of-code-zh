@@ -590,16 +590,16 @@ Object.assign(b, a); // == b
 
 ### over
 
-Creates a function that invokes each provided function with the arguments it receives and returns the results.
+创建一个函数，该函数使用它接收到的参数挨个调用，初始化提供的函数(`provided function`)并返回结果.
 
-Use `Array.map()` and `Function.apply()` to apply each function to the given arguments.
+使用 `Array.map()` 和 `Function.apply()` 将每个函数应用于给定的参数.
 
 ```js
 const over = (...fns) => (...args) => fns.map(fn => fn.apply(null, args));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const minMax = over(Math.min, Math.max);
@@ -608,7 +608,7 @@ minMax(1, 2, 3, 4, 5); // [1,5]
 
 </details>
 
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ 返回目录 ](#table-of-contents)
 
 
 ### overArgs
