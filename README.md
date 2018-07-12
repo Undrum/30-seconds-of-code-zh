@@ -695,12 +695,11 @@ multiplyAndAdd5(5, 2); // 15
 
 ### promisify
 
-Converts an asynchronous function to return a promise.
+将一个异步函数转换为 `Promise` 对象.
 
-Use currying to return a function returning a `Promise` that calls the original function.
-Use the `...rest` operator to pass in all the parameters.
+利用柯里化 (`currying`) 返回一个函数, 它将返回一个调用原函数的 `Promise` 对象. 利用 `...rest` 运算符传入所有的参数.
 
-*In Node 8+, you can use [`util.promisify`](https://nodejs.org/api/util.html#util_util_promisify_original)*
+*在 Node 8+, 你可以用 [`util.promisify`](https://nodejs.org/api/util.html#util_util_promisify_original)*
 
 ```js
 const promisify = func => (...args) =>
@@ -710,7 +709,7 @@ const promisify = func => (...args) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const delay = promisify((d, cb) => setTimeout(cb, d));
@@ -719,7 +718,7 @@ delay(2000).then(() => console.log('Hi!')); // // Promise resolves after 2s
 
 </details>
 
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ 返回目录 ](#table-of-contents)
 
 
 ### rearg
