@@ -668,17 +668,18 @@ const sum = pipeAsyncFunctions(
 
 ### pipeFunctions
 
-Performs left-to-right function composition.
+执行从左到右 (`left-to-right`) 的函数组合.
 
-Use `Array.reduce()` with the spread operator (`...`) to perform left-to-right function composition.
-The first (leftmost) function can accept one or more arguments; the remaining functions must be unary.
+利用展开运算符 (`...`) 和 `Array.reduce()` 将函数从左到右 (`left-to-right`) 进行组合.
+
+第一个函数(最左边)可以接收一个或者多个参数, 其余函数必须只能是一元函数(单参数函数).
 
 ```js
 const pipeFunctions = (...fns) => fns.reduce((f, g) => (...args) => g(f(...args)));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const add5 = x => x + 5;
@@ -689,7 +690,7 @@ multiplyAndAdd5(5, 2); // 15
 
 </details>
 
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ 返回目录 ](#table-of-contents)
 
 
 ### promisify
