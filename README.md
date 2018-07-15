@@ -738,7 +738,7 @@ const rearg = (fn, indexes) => (...args) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 var rearged = rearg(
@@ -752,21 +752,21 @@ rearged('b', 'c', 'a'); // ['a', 'b', 'c']
 
 </details>
 
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ 返回目录 ](#table-of-contents)
 
 
 ### spreadOver
 
-Takes a variadic function and returns a closure that accepts an array of arguments to map to the inputs of the function.
+采用一个可变长函数作为参数 (`variadic function`) ，返回一个闭包用于接收数组参数 (`arguments`) 并将该参数映射到函数的输入.
 
-Use closures and the spread operator (`...`) to map the array of arguments to the inputs of the function.
+利用闭包以及展开运算符 (`...`) 映射数组参数到函数的输入.
 
 ```js
 const spreadOver = fn => argsArr => fn(...argsArr);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const arrayMax = spreadOver(Math.max);
@@ -775,7 +775,7 @@ arrayMax([1, 2, 3]); // 3
 
 </details>
 
-<br>[⬆ Back to top](#table-of-contents)
+<br>[⬆ 返回目录 ](#table-of-contents)
 
 
 ### unary
