@@ -725,7 +725,7 @@ delay(2000).then(() => console.log('Hi!')); // // Promise resolves after 2s
 
 创建一个函数，该函数调用给定的函数，被调用的函数的参数会根据指定的索引 `indexes` 进行排列.
 
-使用 `Array.reduce()` 和 `Array.indexOf()`，根据索引 `indexes` 去重新排列参数，然后和展开运算符 (...) 组合将转换后的函数传入 `fn`.
+使用 `Array.reduce()` 和 `Array.indexOf()`，根据索引 `indexes` 去重新排列参数，然后和展开运算符 (...) 组合将转换后的参数传入 `fn`.
 
 ```js
 const rearg = (fn, indexes) => (...args) =>
