@@ -697,7 +697,7 @@ multiplyAndAdd5(5, 2); // 15
 
 将一个异步函数转换为 `Promise` 对象.
 
-利用柯里化 (`currying`) 返回一个函数, 它将返回一个调用原函数的 `Promise` 对象. 利用 `...rest` 运算符传入所有的参数.
+利用柯里化 (`currying`) 返回一个函数, 它将返回一个调用原函数的 `Promise` 对象. 利用 `...rest` 运算符传入所有的形参 `parameters`.
 
 *在 Node 8+, 你可以用 [`util.promisify`](https://nodejs.org/api/util.html#util_util_promisify_original)*
 
@@ -723,9 +723,9 @@ delay(2000).then(() => console.log('Hi!')); // // Promise resolves after 2s
 
 ### rearg
 
-Creates a function that invokes the provided function with its arguments arranged according to the specified indexes.
+创建一个函数，该函数调用给定的函数，被调用的函数的参数会根据指定的索引 `indexes` 进行排列.
 
-Use `Array.reduce()` and `Array.indexOf()` to reorder arguments based on `indexes` in combination with the spread operator (`...`) to pass the transformed arguments to `fn`.
+使用 `Array.reduce()` 和 `Array.indexOf()`，根据索引 `indexes` 去重新排列参数，然后和展开运算符 (...) 组合将转换后的函数传入 `fn`.
 
 ```js
 const rearg = (fn, indexes) => (...args) =>
